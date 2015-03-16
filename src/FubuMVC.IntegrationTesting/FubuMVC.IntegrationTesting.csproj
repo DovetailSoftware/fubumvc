@@ -32,9 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Accessibility">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
+    <Reference Include="Accessibility" />
     <Reference Include="Bottles">
       <HintPath>..\packages\Bottles.1.0.0.441\lib\Bottles.dll</HintPath>
     </Reference>
@@ -53,11 +51,12 @@
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin.Host.HttpListener">
-      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.0.18-alpha\lib\net40\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.0.18.0-alpha\lib\net40\Microsoft.Owin.Host.HttpListener.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Hosting">
-      <HintPath>..\packages\Microsoft.Owin.Hosting.0.18-alpha\lib\Microsoft.Owin.Hosting.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Owin.Hosting.0.18.0-alpha\lib\net40\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
@@ -67,6 +66,9 @@
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin.Extensions">
+      <HintPath>..\packages\Owin.Extensions.0.6.4\lib\net40\Owin.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Owin.Extensions, Version=0.6.4.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.Extensions.0.6.4\lib\net40\Owin.Extensions.dll</HintPath>
@@ -80,12 +82,14 @@
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
+    <Reference Include="StructureMap.AutoMocking">
+      <HintPath>..\packages\structuremap.automocking.2.6.3\lib\StructureMap.AutoMocking.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap.AutoMocking, Version=2.6.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.automocking.2.6.3\lib\StructureMap.AutoMocking.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />

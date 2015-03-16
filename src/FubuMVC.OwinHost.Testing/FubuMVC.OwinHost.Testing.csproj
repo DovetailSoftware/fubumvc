@@ -48,10 +48,10 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin.Host.HttpListener">
-      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.0.18-alpha\lib\net40\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.0.18.0-alpha\lib\net40\Microsoft.Owin.Host.HttpListener.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Hosting">
-      <HintPath>..\packages\Microsoft.Owin.Hosting.0.18-alpha\lib\Microsoft.Owin.Hosting.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Owin.Hosting.0.18.0-alpha\lib\net40\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
@@ -70,6 +70,9 @@
     </Reference>
     <Reference Include="Rhino.Mocks">
       <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap, Version=2.6.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>

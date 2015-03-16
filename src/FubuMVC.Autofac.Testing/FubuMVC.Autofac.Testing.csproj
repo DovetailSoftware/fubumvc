@@ -43,7 +43,6 @@
       <HintPath>..\packages\FubuCore.1.0.0.225\lib\FubuCore.dll</HintPath>
     </Reference>
     <Reference Include="FubuTestingSupport, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\FubuTestingSupport.1.0.0.225\lib\FubuTestingSupport.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
