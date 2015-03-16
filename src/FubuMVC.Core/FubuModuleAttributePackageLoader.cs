@@ -75,14 +75,7 @@ namespace FubuMVC.Core
 
 
             var assemblyPaths = Directory.GetFiles(path)
-                .Where(file =>
-                       Path.GetExtension(file).Equals(
-                           ".exe",
-                           StringComparison.OrdinalIgnoreCase)
-                       ||
-                       Path.GetExtension(file).Equals(
-                           ".dll",
-                           StringComparison.OrdinalIgnoreCase));
+                .Where(file => Path.GetExtension(file).Equals(".dll", StringComparison.OrdinalIgnoreCase) && Path.GetFileName(file).StartsWith("FubuMVC."));                
 
             foreach (string assemblyPath in assemblyPaths)
             {
