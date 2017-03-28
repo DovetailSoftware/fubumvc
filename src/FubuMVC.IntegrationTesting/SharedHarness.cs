@@ -20,13 +20,13 @@ namespace FubuMVC.IntegrationTesting
     [SetUpFixture]
     public class HarnessBootstrapper
     {
-        [SetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             SelfHostHarness.Start();
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             SelfHostHarness.Shutdown();

@@ -16,7 +16,7 @@ namespace FubuMVC.Tests
     [TestFixture]
     public class can_find_and_load_bottles_with_the_FubuModule_attribute
     {
-        [Test]
+        [Test, Ignore("Broken by 023603a - we no longer scan all DLLs for bottles")]
         public void find_assembly_bottles()
         {
             // Trash gets left over from other tests.  Joy.

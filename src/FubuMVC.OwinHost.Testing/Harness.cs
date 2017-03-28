@@ -18,13 +18,13 @@ namespace FubuMVC.OwinHost.Testing
     [SetUpFixture]
     public class HarnessBootstrapper
     {
-        [SetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             Harness.Start();
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             Harness.Shutdown();
