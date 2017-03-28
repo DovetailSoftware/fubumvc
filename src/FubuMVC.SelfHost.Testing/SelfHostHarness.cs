@@ -37,7 +37,7 @@ namespace FubuMVC.SelfHost.Testing
 
         public static void Start()
         {
-            _server = new SelfHostHttpServer(5501, GetRootDirectory());
+            _server = new SelfHostHttpServer(5502, GetRootDirectory());
             var runtime = FubuApplication.For<HarnessRegistry>().StructureMap(new Container()).Bootstrap();
         
             _server.Start(runtime);

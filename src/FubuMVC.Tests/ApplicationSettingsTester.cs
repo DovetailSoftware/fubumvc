@@ -88,7 +88,7 @@ namespace FubuMVC.Tests
         public void write_and_read()
         {
             var settings1 = ApplicationSettings.For<KayakApplication>();
-            settings1.Port = 5501;
+            settings1.Port = 5503;
             
             settings1.Write();
 
