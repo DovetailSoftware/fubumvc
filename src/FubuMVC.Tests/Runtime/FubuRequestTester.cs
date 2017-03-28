@@ -11,6 +11,7 @@ using Rhino.Mocks;
 using StructureMap;
 using FubuMVC.Core;
 using FubuCore;
+using FubuCore.Logging;
 
 namespace FubuMVC.Tests.Runtime
 {

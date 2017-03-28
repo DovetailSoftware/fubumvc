@@ -23,6 +23,10 @@ namespace FubuMVC.Tests.Packaging
         [SetUp]
         public void SetUp()
         {
+            var dir = Path.GetDirectoryName(typeof(PackageManifestReaderIntegratedTester).Assembly.CodeBase);
+            dir = new System.Uri(dir).LocalPath;
+            Directory.SetCurrentDirectory(dir);
+
             packageFolder = FileSystem.Combine("../../../TestPackage1").ToFullPath();
 
             var fileSystem = new FileSystem();

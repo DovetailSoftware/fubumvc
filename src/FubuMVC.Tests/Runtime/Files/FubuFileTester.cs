@@ -11,6 +11,14 @@ namespace FubuMVC.Tests.Runtime.Files
     [TestFixture]
     public class FubuFileTester
     {
+        [SetUp]
+        public void SetUp()
+        {
+            var dir = Path.GetDirectoryName(typeof(FubuFileTester).Assembly.CodeBase);
+            dir = new System.Uri(dir).LocalPath;
+            Directory.SetCurrentDirectory(dir);
+        }
+
         [Test]
         public void read_contents()
         {

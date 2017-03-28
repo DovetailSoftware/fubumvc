@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using FubuCore;
 using FubuMVC.Core;
 using FubuMVC.StructureMap;
@@ -15,6 +16,10 @@ namespace FubuMVC.Tests
         [Test]
         public void read_from_a_file_by_name()
         {
+            var dir = Path.GetDirectoryName(typeof(ApplicationSettingsTester).Assembly.CodeBase);
+            dir = new Uri(dir).LocalPath;
+            Directory.SetCurrentDirectory(dir);
+
             new FileSystem().AlterFlatFile("proj1.application.config", list =>
             {
                 list.Add("ApplicationSettings.PhysicalPath=source/proj1");

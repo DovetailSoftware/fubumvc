@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using AssemblyPackage;
 using Bottles;
 using FubuMVC.Core;
@@ -12,6 +13,7 @@ using FubuMVC.StructureMap;
 using StructureMap;
 using System.Linq;
 using System.Collections.Generic;
+using System.IO;
 using FubuTestingSupport;
 using FubuCore;
 
@@ -28,6 +30,10 @@ namespace FubuMVC.Tests
         [SetUp]
         public void SetUp()
         {
+            var dir = Path.GetDirectoryName(typeof(BehaviorGraph_logging_integration_tester).Assembly.CodeBase);
+            dir = new Uri(dir).LocalPath;
+            Directory.SetCurrentDirectory(dir);
+
             theRegistry = new LoggedFubuRegistry();
 
             // Do it this way so that it gets the assembly package

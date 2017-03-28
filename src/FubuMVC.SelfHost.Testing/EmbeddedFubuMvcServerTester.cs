@@ -15,13 +15,13 @@ namespace FubuMVC.SelfHost.Testing
     {
         private EmbeddedFubuMvcServer _application;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             _application = FubuApplication.For<HarnessRegistry>().StructureMap(new Container()).RunEmbedded();
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             _application.Dispose();
