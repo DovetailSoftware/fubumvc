@@ -42,6 +42,9 @@
     <Reference Include="FubuCore, Version=100.0.0.12, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FubuCore.100.0.0.12\lib\FubuCore.dll</HintPath>
     </Reference>
+    <Reference Include="FubuLocalization, Version=100.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubuLocalization.100.0.0.3\lib\FubuLocalization.dll</HintPath>
+    </Reference>
     <Reference Include="FubuTestingSupport, Version=100.0.0.12, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FubuTestingSupport.100.0.0.12\lib\FubuTestingSupport.dll</HintPath>
     </Reference>
@@ -110,6 +113,15 @@
     <Compile Include="SelfHostHttpServerTester.cs" />
     <Compile Include="SharedHarness.cs" />
     <Compile Include="SharedHarnessContext.cs" />
+    <Compile Include="UI\can_override_the_field_chrome_bug.cs" />
+    <Compile Include="UI\doughnut_caching_tester.cs" />
+    <Compile Include="UI\ElementConventionsFubuPageExtensions_FullStackTester_DefaultConventions.cs" />
+    <Compile Include="UI\ElementConventions_with_Profiles_Tester.cs" />
+    <Compile Include="UI\Explicit_accessor_overrides_integration_tester.cs" />
+    <Compile Include="UI\FormRequestConventionsIntegrationTester.cs" />
+    <Compile Include="UI\FubuPageExtensions_FullStack_Tester.cs" />
+    <Compile Include="UI\HtmlDocumentViewEngineIntegrationTester.cs" />
+    <Compile Include="UI\ShowEditExpressions_integration_Tester.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FubuMVC.Core\FubuMVC.Core.csproj">

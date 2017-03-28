@@ -86,9 +86,11 @@ namespace FubuMVC.Tests.Runtime
         {
             IEnumerable<Type> types = typeof(FubuRequest).Assembly.GetExportedTypes()
                 .Where(x => x.IsConcreteTypeOf<IConfigurationAction>())
+                .Where(x => !x.Namespace.StartsWith("FubuMVC.Core.View"))
+                .Where(x => !x.Namespace.StartsWith("FubuMVC.Core.UI"))
                 .Where(x => !Description.HasExplicitDescription(x));
 
-            types.Each(x => Debug.WriteLine(x.Name));
+            types.Each(x => Console.WriteLine(x.FullName));
 
             types.Any().ShouldBeFalse();
         }

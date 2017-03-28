@@ -77,7 +77,7 @@ namespace FubuMVC.IntegrationTesting
 
             FubuMvcPackageFacility.PhysicalRootPath = GetRootDirectory();
 
-            var port = PortFinder.FindPort(5500);
+            var port = PortFinder.FindPort(5530);
             var runtime = bootstrapRuntime();
 
             _server = new EmbeddedFubuMvcServer(runtime, GetRootDirectory(), port);

@@ -285,7 +285,51 @@
     <Compile Include="Security\EndPointAuthorizorTester.cs" />
     <Compile Include="Security\PrincipalRolesTester.cs" />
     <Compile Include="Security\AuthorizationPolicyExecutorTester.cs" />
+    <Compile Include="UI\Address.cs" />
+    <Compile Include="UI\AuthorizationOnPageExtensionsTester.cs" />
+    <Compile Include="UI\AuthorizedLinkExpressionsTester.cs" />
+    <Compile Include="UI\configuring_conventions_by_profile.cs" />
+    <Compile Include="UI\DefaultHtmlConventionTester.cs" />
+    <Compile Include="UI\Elements\AccessorDefTester.cs" />
+    <Compile Include="UI\Elements\AccessorOverrideElementBuilderPolicyTester.cs" />
+    <Compile Include="UI\Elements\AddressClasses.cs" />
+    <Compile Include="UI\Elements\Builders\AddClassForAttributeModifierTester.cs" />
+    <Compile Include="UI\Elements\Builders\AddClassModifierTester.cs" />
+    <Compile Include="UI\Elements\Builders\AddNameModifierTester.cs" />
+    <Compile Include="UI\Elements\Builders\CheckboxBuilderTester.cs" />
+    <Compile Include="UI\Elements\Builders\DefaultLabelBuilderTester.cs" />
+    <Compile Include="UI\Elements\Builders\SpanDisplayBuilderTester.cs" />
+    <Compile Include="UI\Elements\Builders\TextboxBuilderTester.cs" />
+    <Compile Include="UI\Elements\DefaultElementNamingConventionTester.cs" />
+    <Compile Include="UI\Elements\DotNotationNamingConventionTester.cs" />
+    <Compile Include="UI\Elements\ElementGeneratorTester.cs" />
+    <Compile Include="UI\Elements\ElementIdActivatorTester.cs" />
+    <Compile Include="UI\Elements\ElementRequestActivatorTester.cs" />
+    <Compile Include="UI\Elements\ElementRequestTester.cs" />
+    <Compile Include="UI\Elements\ElementTagOverrideTester.cs" />
+    <Compile Include="UI\Forms\DefinitionListFieldChromeTester.cs" />
+    <Compile Include="UI\Forms\FormForExpressionTester.cs" />
+    <Compile Include="UI\Forms\FormLineExpressionTester.cs" />
+    <Compile Include="UI\Forms\FormRequestTester.cs" />
+    <Compile Include="UI\Forms\FubuPageExtensionsTester.cs" />
+    <Compile Include="UI\FubuPageExtensionsTester.cs" />
+    <Compile Include="UI\HtmlConventionRegistryTester.cs" />
+    <Compile Include="UI\HtmlElementConventionsContext.cs" />
+    <Compile Include="UI\HtmlTagExtensionsTester.cs" />
+    <Compile Include="UI\inline_definition_of_conditional_modifications_and_builders.cs" />
+    <Compile Include="UI\inline_definition_of_element_actions_with_always_condition.cs" />
+    <Compile Include="UI\inline_definition_of_html_conventions_using_attributes.cs" />
     <Compile Include="UI\PartialInvokerTester.cs" />
+    <Compile Include="UI\Scenarios\HtmlElementScenarioTester.cs" />
+    <Compile Include="UI\Security\AccessRightTester.cs" />
+    <Compile Include="UI\Security\DegradingAccessElementBuilderIntegrationTester.cs" />
+    <Compile Include="UI\Security\DegradingAccessElementBuilderTester.cs" />
+    <Compile Include="UI\Security\FieldAccessRightsTester.cs" />
+    <Compile Include="UI\Security\FieldAccessServiceIntegratedTester.cs" />
+    <Compile Include="UI\ServiceLocatorTagRequestActivatorTester.cs" />
+    <Compile Include="UI\Templates\TemplateWriterTester.cs" />
+    <Compile Include="UI\templates_html_creation_specs.cs" />
+    <Compile Include="UI\UIServiceRegistry_registration_spec.cs" />
     <Compile Include="UrlExtensionsTester.cs" />
     <Compile Include="Behaviors\ActionInvokersTester.cs" />
     <Compile Include="Behaviors\DownloadFileBehaviorTester.cs" />
@@ -333,6 +377,30 @@
     <Compile Include="Urls\BasicUrlRegistrationScanningIntegrationTester.cs" />
     <Compile Include="Urls\StubCurrentHttpRequest.cs" />
     <Compile Include="Urls\UrlRegistryIntegrationTester.cs" />
+    <Compile Include="View\Attachment\DefaultProfileTester.cs" />
+    <Compile Include="View\Attachment\ProfileViewTokenTester.cs" />
+    <Compile Include="View\Attachment\ViewAttacherTester.cs" />
+    <Compile Include="View\Attachment\ViewExclusionTester.cs" />
+    <Compile Include="View\Attachment\ViewTokenExtensionsTester.cs" />
+    <Compile Include="View\CommonViewNamespaces_is_registered.cs" />
+    <Compile Include="View\Default_ViewAttachment_Filters_Convention_Tester.cs" />
+    <Compile Include="View\FakeViews\Folder1\A.aspx.cs">
+      <DependentUpon>A.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\FakeViews\Folder1\ViewModel3.aspx.cs">
+      <DependentUpon>ViewModel3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\FakeViews\ModelsAndControllers.cs" />
+    <Compile Include="View\FubuPageActivatorTester.cs" />
+    <Compile Include="View\must_be_a_description_on_imporant_things.cs" />
+    <Compile Include="View\New\ViewNodeTester.cs" />
+    <Compile Include="View\New\ViewWriterTester.cs" />
+    <Compile Include="View\OutputNodeExtensionsTester.cs" />
+    <Compile Include="View\SimplePage.cs" />
+    <Compile Include="View\ViewEnginesTester.cs" />
+    <Compile Include="View\ViewsForActionFiltersTester.cs" />
     <Compile Include="Web\Security\WebAuthenticationContextTester.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -366,6 +434,9 @@
     <Content Include="Runtime\Files\Data\d.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\FubuMVC.Core.UI.Testing.csproj" />
+    <Content Include="View\FakeViews\Folder1\A.aspx" />
+    <Content Include="View\FakeViews\Folder1\ViewModel3.aspx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FubuMVC.Tests.dll.config">

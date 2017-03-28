@@ -29,7 +29,7 @@ namespace FubuMVC.IntegrationTesting.Ajax
         [Test]
         public void send_message_that_gets_through_the_first_behavior_and_is_handled_by_the_last()
         {
-            using (var server = FubuApplication.For<TestRegistry>().StructureMap(new Container()).RunEmbedded(port:PortFinder.FindPort(5500)))
+            using (var server = FubuApplication.For<TestRegistry>().StructureMap(new Container()).RunEmbedded(port:PortFinder.FindPort(5510)))
             {
                 var input = new CharacterInput
                 {
@@ -44,7 +44,7 @@ namespace FubuMVC.IntegrationTesting.Ajax
         [Test]
         public void send_message_that_gets_caught_by_validation_behavior()
         {
-            using (var server = FubuApplication.For<TestRegistry>().StructureMap(new Container()).RunEmbedded(port: PortFinder.FindPort(5500)))
+            using (var server = FubuApplication.For<TestRegistry>().StructureMap(new Container()).RunEmbedded(port: PortFinder.FindPort(5520)))
             {
                 var input = new CharacterInput
                 {
