@@ -34,8 +34,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bottles">
-      <HintPath>..\packages\Bottles.1.0.0.441\lib\Bottles.dll</HintPath>
+    <Reference Include="Bottles, Version=100.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bottles.100.0.0.10\lib\Bottles.dll</HintPath>
     </Reference>
     <Reference Include="FubuCore, Version=100.0.0.12, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FubuCore.100.0.0.12\lib\FubuCore.dll</HintPath>
