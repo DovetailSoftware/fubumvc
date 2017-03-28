@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using FubuCore;
-using FubuMVC.Core;
-using FubuMVC.Core.Behaviors.Conditional;
 using FubuMVC.Core.Http;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Resources.Conneg;
@@ -25,7 +23,7 @@ namespace FubuMVC.Tests.NewConneg
 
         #region Setup/Teardown
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             var node = new OutputNode(typeof (Address));

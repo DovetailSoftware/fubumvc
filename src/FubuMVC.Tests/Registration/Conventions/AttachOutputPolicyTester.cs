@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
-using System.Text;
 using FubuCore;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
@@ -20,7 +17,7 @@ namespace FubuMVC.Tests.Registration.Conventions
         private AttachOutputPolicy _outputPolicy;
         private BehaviorGraph _graph;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             _outputPolicy = new AttachOutputPolicy();

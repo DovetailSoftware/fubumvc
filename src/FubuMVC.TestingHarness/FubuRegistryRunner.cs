@@ -53,7 +53,7 @@ namespace FubuMVC.TestingHarness
         }
 
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             beforeRunning();
@@ -91,7 +91,7 @@ namespace FubuMVC.TestingHarness
             
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             afterRunning();

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Reflection;
-using System.Text;
 using FubuCore.Reflection;
 using FubuMVC.Core;
 using FubuTestingSupport;
@@ -15,7 +12,7 @@ namespace FubuMVC.Tests
     {
         private MethodInfo _method1;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void FixtureSetUp()
         {
             _method1 = ReflectionHelper.GetMethod<PureTestPurposes>(x => x.Bind(5));
