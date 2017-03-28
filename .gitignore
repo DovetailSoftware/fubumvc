@@ -59,3 +59,4 @@ deployment
 fubu.cmd
 Gemfile.lock
 src/.vs/
+.bottle-alias
