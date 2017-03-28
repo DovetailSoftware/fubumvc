@@ -59,7 +59,9 @@ end
 
 desc 'Run the unit tests without compile'
 task :fast_test do
-  sh "src/packages/NUnit.ConsoleRunner.3.6.1/tools/nunit3-console.exe src/FubuMVC.Tests/bin/#{COMPILE_TARGET}/FubuMVC.Tests.dll src/FubuMVC.SelfHost.Testing/bin/#{COMPILE_TARGET}/FubuMVC.SelfHost.Testing.dll src/FubuMVC.StructureMap.Testing/bin/#{COMPILE_TARGET}/FubuMVC.StructureMap.Testing.dll"
+  # Note: src/FubuMVC.AspNetTesting/bin/#{COMPILE_TARGET}/FubuMVC.AspNetTesting.dll is currently build for IIS6 and blows up with IIS7 and later unless you have IIS WMI installed.
+  #TODO: Figure out a better way to do the ASP.NET testing (IISExpress?)
+  sh "src/packages/NUnit.ConsoleRunner.3.6.1/tools/nunit3-console.exe src/FubuMVC.Tests/bin/#{COMPILE_TARGET}/FubuMVC.Tests.dll src/FubuMVC.SelfHost.Testing/bin/#{COMPILE_TARGET}/FubuMVC.SelfHost.Testing.dll src/FubuMVC.OwinHost.Testing/bin/#{COMPILE_TARGET}/FubuMVC.OwinHost.Testing.dll src/FubuMVC.StructureMap.Testing/bin/#{COMPILE_TARGET}/FubuMVC.StructureMap.Testing.dll"
 end
 
 desc 'Run the integration tests'
