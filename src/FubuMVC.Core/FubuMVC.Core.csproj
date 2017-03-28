@@ -49,6 +49,9 @@
     <Reference Include="Ionic.Zip">
       <HintPath>..\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll</HintPath>
     </Reference>
+    <Reference Include="Spark, Version=1.7.0.0, Culture=neutral, PublicKeyToken=7f8549eed921a12c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spark.1.7.5.0\lib\NET40\Spark.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -650,6 +653,39 @@
     <Compile Include="View\Rendering\RenderStrategies.cs" />
     <Compile Include="View\Rendering\ViewModifiers.cs" />
     <Compile Include="View\Rendering\ViewRenderer.cs" />
+    <Compile Include="View\Spark\AssemblyInfo.cs" />
+    <Compile Include="View\Spark\PathExtensions.cs" />
+    <Compile Include="View\Spark\Registration\GenericViewModelTypeFinder.cs" />
+    <Compile Include="View\Spark\Registration\ViewDescriptorHelper.cs" />
+    <Compile Include="View\Spark\Rendering\FubuSparkView.cs" />
+    <Compile Include="View\Spark\Rendering\IHtmlEncoder.cs" />
+    <Compile Include="View\Spark\Rendering\ViewDefinition.cs" />
+    <Compile Include="View\Spark\Rendering\ViewDefinitionPolicy.cs" />
+    <Compile Include="View\Spark\Rendering\ViewDefinitionResolver.cs" />
+    <Compile Include="View\Spark\Rendering\ViewEntryProviderCache.cs" />
+    <Compile Include="View\Spark\Rendering\ViewEntrySource.cs" />
+    <Compile Include="View\Spark\Rendering\ViewFactory.cs" />
+    <Compile Include="View\Spark\Rendering\ViewModifiers.cs" />
+    <Compile Include="View\Spark\Rendering\ViewOutput.cs" />
+    <Compile Include="View\Spark\SparkActivator.cs" />
+    <Compile Include="View\Spark\SparkEngine.cs" />
+    <Compile Include="View\Spark\SparkEngineSettings.cs" />
+    <Compile Include="View\Spark\SparkModel\ChunkLoader.cs" />
+    <Compile Include="View\Spark\SparkModel\FubuBindingProvider.cs" />
+    <Compile Include="View\Spark\SparkModel\FubuPartialProvider.cs" />
+    <Compile Include="View\Spark\SparkModel\SharedTemplateLocator.cs" />
+    <Compile Include="View\Spark\SparkModel\SharingAttachers.cs" />
+    <Compile Include="View\Spark\SparkModel\SparkDescriptor.cs" />
+    <Compile Include="View\Spark\SparkModel\SparkTemplateRegistry.cs" />
+    <Compile Include="View\Spark\SparkModel\SparkTemplateSelector.cs" />
+    <Compile Include="View\Spark\SparkModel\Template.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplateBinders.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplateExtensions.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplatePolicies.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplateViewFolder.cs" />
+    <Compile Include="View\Spark\SparkPrecompiler.cs" />
+    <Compile Include="View\Spark\SparkViewFacility.cs" />
+    <Compile Include="View\Spark\SparkViewToken.cs" />
     <Compile Include="View\ViewEngines.cs" />
     <Compile Include="View\ViewEnginesExtension.cs" />
     <Compile Include="View\ViewNode.cs" />
@@ -658,6 +694,7 @@
     <Compile Include="Web\Security\WebSecurityContext.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".package-manifest" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

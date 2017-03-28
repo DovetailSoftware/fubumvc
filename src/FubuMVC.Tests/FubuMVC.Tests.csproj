@@ -57,6 +57,9 @@
     <Reference Include="Rhino.Mocks">
       <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
     </Reference>
+    <Reference Include="Spark, Version=1.7.0.0, Culture=neutral, PublicKeyToken=7f8549eed921a12c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spark.1.7.5.0\lib\NET40\Spark.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -399,6 +402,62 @@
     <Compile Include="View\New\ViewWriterTester.cs" />
     <Compile Include="View\OutputNodeExtensionsTester.cs" />
     <Compile Include="View\SimplePage.cs" />
+    <Compile Include="View\Spark\DefaultServicesTester.cs" />
+    <Compile Include="View\Spark\Rendering\AjaxRenderStrategyTester.cs" />
+    <Compile Include="View\Spark\Rendering\CacheAttacherTester.cs" />
+    <Compile Include="View\Spark\Rendering\ContentActivationTester.cs" />
+    <Compile Include="View\Spark\Rendering\DefaultRenderStrategyTester.cs" />
+    <Compile Include="View\Spark\Rendering\DefaultViewDefinitionPolicyTester.cs" />
+    <Compile Include="View\Spark\Rendering\FubuSparkViewDecoratorTester.cs" />
+    <Compile Include="View\Spark\Rendering\FubuSparkViewTester.cs" />
+    <Compile Include="View\Spark\Rendering\NestedOutputActivationTester.cs" />
+    <Compile Include="View\Spark\Rendering\NestedOutputTester.cs" />
+    <Compile Include="View\Spark\Rendering\NestedRenderStrategyTester.cs" />
+    <Compile Include="View\Spark\Rendering\NestedViewOutputActivatorTester.cs" />
+    <Compile Include="View\Spark\Rendering\OnceTableActivationTester.cs" />
+    <Compile Include="View\Spark\Rendering\OuterViewOutputActivatorTester.cs" />
+    <Compile Include="View\Spark\Rendering\RenderActionTester.cs" />
+    <Compile Include="View\Spark\Rendering\SiteResourceAttacherTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewContentDisposerTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewDefinitionResolverTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewEntryProviderCacheTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewEntrySourceTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewFactoryTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewModifierServiceTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewOutputTester.cs" />
+    <Compile Include="View\Spark\Rendering\ViewRendererTester.cs" />
+    <Compile Include="View\Spark\SparkActivatorTester.cs" />
+    <Compile Include="View\Spark\SparkEngineSettingsTester.cs" />
+    <Compile Include="View\Spark\SparkModel\BindingsAttacherTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Binding\GenericParserTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Binding\GenericViewModelBinderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Binding\ViewDescriptorBinderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Binding\ViewModelBinderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\ChunkLoaderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\ExtendedTester.cs" />
+    <Compile Include="View\Spark\SparkModel\FubuBindingProviderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\FubuPartialProviderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\MasterAttacherTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Policies\NamespacePolicyTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Policies\ViewPathPolicyTester.cs" />
+    <Compile Include="View\Spark\SparkModel\SharedPathBuilderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\SharedTemplateLocatorTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\DependencyRuleTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\GlobalDependencyTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\RecordingSharingRegistrationTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\SharingConfigActivatorTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\SharingGraphTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\SharingPolicyActivatorTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\SharingRegistrationDiagnosticsTester.cs" />
+    <Compile Include="View\Spark\SparkModel\Sharing\SparkDslReaderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplateComposerTester.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplateDirectoryProviderTester.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplateExtensionsTester.cs" />
+    <Compile Include="View\Spark\SparkModel\TemplateRegistryTester.cs" />
+    <Compile Include="View\Spark\SparkModel\ViewFolder\BasicTester.cs" />
+    <Compile Include="View\Spark\SparkPrecompilerTester.cs" />
+    <Compile Include="View\Spark\SparkViewFacilityTester.cs" />
+    <Compile Include="View\Spark\SparkViewTokenTester.cs" />
     <Compile Include="View\ViewEnginesTester.cs" />
     <Compile Include="View\ViewsForActionFiltersTester.cs" />
     <Compile Include="Web\Security\WebAuthenticationContextTester.cs" />
@@ -437,6 +496,18 @@
     <Content Include="UI\FubuMVC.Core.UI.Testing.csproj" />
     <Content Include="View\FakeViews\Folder1\A.aspx" />
     <Content Include="View\FakeViews\Folder1\ViewModel3.aspx" />
+    <Content Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Shared\bindings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Spark\Templates\App\Shared\bindings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Spark\Templates\Pak1\data.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Spark\Templates\Shared\bindings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="FubuMVC.Tests.dll.config">
@@ -444,6 +515,180 @@
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="View\Spark\Templates\A3.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\A4.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieG.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieGx.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieSL.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieT.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieW.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieX.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Models\SerieZ.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Shared\Maker.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Shared\_fail.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Shared\_header.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Shared\_lenovo.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\fubu-packages\Package1\WebContent\Handlers\Shared\_samePath.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Handlers\Models\MacBook.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Handlers\Models\MacBookAir.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Handlers\Models\MacMini.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Handlers\Models\MacPro.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Handlers\Models\NoLuck.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Handlers\Shared\Maker.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Handlers\Shared\_samePath.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Shared\_appname.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Shared\_footer.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\App\Shared\_header.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Global\Handlers\Models\_notShared.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Global\Handlers\Shared\_globalPartial.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Home\file.foo">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Home\Home.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Models\Inspiron.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Models\Vostro.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Models\Xps.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Shared\Maker.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Shared\_dell.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Shared\_fail.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Shared\_footer.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\Handlers\Shared\_samePath.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Package2\sample.123">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Alpha\Bravo\Bar.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Alpha\Bravo\Charlie\Delta.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Alpha\Foxtrot\Golf.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Alpha\Hotel.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Baz.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Foo\Bar.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Home\Home.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak1\Home\_name.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak2\Buzz.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak2\Home\Home.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak2\Shared\application.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Pak2\Shared\theme.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Shared\application.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Shared\_footer.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Views\A1.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Views\A2.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Views\F1\baz.fub">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Views\F1\dog.zoo">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Views\F1\G1.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\Views\file.bar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="View\Spark\Templates\_header.spark">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

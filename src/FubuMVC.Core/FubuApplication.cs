@@ -18,6 +18,7 @@ using FubuMVC.Core.Routing;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.UI;
 using FubuMVC.Core.View;
+using FubuMVC.Core.View.Spark;
 
 namespace FubuMVC.Core
 {
@@ -158,12 +159,15 @@ namespace FubuMVC.Core
                     // Need to do this to make the provenance for bottles come out right
                     _registry.Value.Config.Seal();
 
-                    // FubuMVC.Core.View
+                    // FubuMVC.ViewEngines (FubuMVC.Core.View)
                     _registry.Value.Import<CommonViewNamespacesRegistration>();
                     _registry.Value.Import<ViewEnginesExtension>();
 
                     // FubuMVC.Core.UI
                     _registry.Value.Import<FubuHtmlRegistration>();
+
+                    // FubuMVC.ViewEngines (FubuMVC.Spark)
+                    _registry.Value.Import<SparkEngine>();
 
                     applyFubuExtensionsFromPackages();
 
