@@ -15,7 +15,7 @@
       <dependency id="Bottles" version="100.0.0.10" />
       <dependency id="FubuCore" version="100.0.0.12" />
       <dependency id="FubuLocalization" version="100.0.0.3" />
-      <dependency id="HtmlTags" version="1.20.150" />
+      <dependency id="HtmlTags" version="1.2.0.150" />
     </dependencies>
   </metadata>
   <files>
