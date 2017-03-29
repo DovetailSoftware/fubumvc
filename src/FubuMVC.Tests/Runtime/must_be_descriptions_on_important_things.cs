@@ -86,8 +86,7 @@ namespace FubuMVC.Tests.Runtime
         {
             IEnumerable<Type> types = typeof(FubuRequest).Assembly.GetExportedTypes()
                 .Where(x => x.IsConcreteTypeOf<IConfigurationAction>())
-                .Where(x => !x.Namespace.StartsWith("FubuMVC.Core.View"))
-                .Where(x => !x.Namespace.StartsWith("FubuMVC.Core.UI"))
+                .Where(x => !x.Namespace.StartsWith("FubuMVC.Core"))
                 .Where(x => !Description.HasExplicitDescription(x));
 
             types.Each(x => Console.WriteLine(x.FullName));
@@ -169,7 +168,9 @@ namespace FubuMVC.Tests.Runtime
                 .Where(
                     x =>
                     x.IsConcrete() && x.IsOpenGeneric() && x.GetInterfaces().Any(t => t.Name.Contains("IMediaWriter")))
+                .Where(x => !x.Namespace.StartsWith("FubuMVC.Core"))
                 .Where(x => !Description.HasExplicitDescription(x));
+                
 
             types.Each(x => Debug.WriteLine(x.Name));
 
