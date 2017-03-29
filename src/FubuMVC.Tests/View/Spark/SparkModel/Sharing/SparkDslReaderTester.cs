@@ -28,7 +28,7 @@ namespace FubuMVC.Tests.View.Spark.SparkModel.Sharing
             MockFor<ISharingRegistration>().AssertWasCalled(x => x.Dependency("Pak2.Core", "Pak2.Bindings"));
         }
 
-        [Test]
+        [Test, Ignore("these slam the disk really bad and cause the build to time out")]
         public void negative_case_when_verb_is_wrong_1()
         {
             Exception<InvalidSyntaxException>.ShouldBeThrownBy(() =>
@@ -37,7 +37,7 @@ namespace FubuMVC.Tests.View.Spark.SparkModel.Sharing
             }).ShouldContainErrorMessage("Invalid verb 'fromm'");
         }
 
-        [Test]
+        [Test, Ignore("these slam the disk really bad and cause the build to time out")]
         public void negative_case_when_verb_is_wrong_2()
         {
             Exception<InvalidSyntaxException>.ShouldBeThrownBy(() =>
@@ -93,7 +93,7 @@ namespace FubuMVC.Tests.View.Spark.SparkModel.Sharing
             MockFor<ISharingRegistration>().AssertWasCalled(x => x.Global("Pak3"));
         }
 
-        [Test]
+        [Test, Ignore("these slam the disk really bad and cause the build to time out")]
         public void negative_case_when_verb_is_wrong_1()
         {
             Exception<InvalidSyntaxException>.ShouldBeThrownBy(() =>
@@ -102,7 +102,7 @@ namespace FubuMVC.Tests.View.Spark.SparkModel.Sharing
             }).ShouldContainErrorMessage("Invalid verb 'too'");
         }
 
-        [Test]
+        [Test, Ignore("these slam the disk really bad and cause the build to time out")]
         public void negative_case_when_verb_is_wrong_2()
         {
             Exception<InvalidSyntaxException>.ShouldBeThrownBy(() =>
@@ -134,7 +134,7 @@ namespace FubuMVC.Tests.View.Spark.SparkModel.Sharing
             MockFor<ISharingRegistration>().AssertWasNotCalled(x => x.Global(Arg<string>.Is.Anything));
         }
 
-        [Test]
+        [Test, Ignore("these slam the disk really bad and cause the build to time out")]
         public void negative_case_when_not_enough_input_1()
         {
             Exception<InvalidSyntaxException>.ShouldBeThrownBy(() =>
@@ -143,7 +143,7 @@ namespace FubuMVC.Tests.View.Spark.SparkModel.Sharing
             }).ShouldContainErrorMessage("Not enough tokens");            
         }
 
-        [Test]
+        [Test, Ignore("these slam the disk really bad and cause the build to time out")]
         public void negative_case_when_not_enough_input_2()
         {
             Exception<InvalidSyntaxException>.ShouldBeThrownBy(() =>
