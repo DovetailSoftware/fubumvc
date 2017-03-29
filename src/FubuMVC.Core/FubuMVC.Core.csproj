@@ -102,6 +102,13 @@
     <Compile Include="ConfigurationTypeAttribute.cs" />
     <Compile Include="Configuration\DefaultConfigurationPack.cs" />
     <Compile Include="Configuration\DiscoveryActionsConfigurationPack.cs" />
+    <Compile Include="ContentExtensions\ContentExtensionGraph.cs" />
+    <Compile Include="ContentExtensions\ContentExtensions.cs" />
+    <Compile Include="ContentExtensions\ExtensionsExpression.cs" />
+    <Compile Include="ContentExtensions\ExtensionShelf.cs" />
+    <Compile Include="ContentExtensions\FilteredContentExtension.cs" />
+    <Compile Include="ContentExtensions\IContentExtension.cs" />
+    <Compile Include="ContentExtensions\LambdaExtension.cs" />
     <Compile Include="Diagnostics\AboutEndpoint.cs" />
     <Compile Include="Diagnostics\RegisterAbout.cs" />
     <Compile Include="Endpoints\EndpointDriver.cs" />
