@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Routing;
 using Bottles;
-using Bottles.Diagnostics;
-using Bottles.Environment;
 using FubuCore;
 using FubuCore.Binding;
 using FubuMVC.Core.Bootstrapping;
 using FubuMVC.Core.Configuration;
 using FubuMVC.Core.Diagnostics;
 using FubuMVC.Core.Http;
+using FubuMVC.Core.Media;
+using FubuMVC.Core.Navigation;
 using FubuMVC.Core.Packaging;
 using FubuMVC.Core.Registration;
-using FubuMVC.Core.Registration.ObjectGraph;
 using FubuMVC.Core.Routing;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.UI;
@@ -168,6 +167,12 @@ namespace FubuMVC.Core
 
                     // FubuMVC.ViewEngines (FubuMVC.Spark)
                     _registry.Value.Import<SparkEngine>();
+
+                    // FubuMVC.Media
+                    _registry.Value.Import<MediaBottleRegistrations>();
+
+                    // FubuMVC.Navigation
+                    _registry.Value.Import<NavigationRegistryExtension>();
 
                     applyFubuExtensionsFromPackages();
 
