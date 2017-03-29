@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using FubuCore;
 using FubuMVC.Core.View.Model;
@@ -168,6 +169,8 @@ namespace FubuMVC.Tests.View.Spark.SparkModel
                 _root,                               
                 FileSystem.Combine(_root, Shared)                               
             };
+
+            expected = expected.Select(x => x.TrimEnd(Path.DirectorySeparatorChar)).ToList();
 
             ClassUnderTest.ReachablesOf(templateAt(0)).ShouldHaveTheSameElementsAs(expected);
         }

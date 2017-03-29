@@ -36,11 +36,6 @@ namespace FubuMVC.Core.View.Model
                 path = Path.GetDirectoryName(path);
                 if (path == null) break;
 
-                if (!path.EndsWith(Path.DirectorySeparatorChar.ToString()))
-                {
-                    path += Path.DirectorySeparatorChar;
-                }
-
                 if (includeDirectAncestor)
                 {
                     yield return path;

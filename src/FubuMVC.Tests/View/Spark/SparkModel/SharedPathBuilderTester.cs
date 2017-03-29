@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using FubuCore;
 using FubuMVC.Core.View.Model;
 using FubuTestingSupport;
@@ -62,6 +63,8 @@ namespace FubuMVC.Tests.View.Spark.SparkModel
 
             _folderNames.Each(s => expected.Add(FileSystem.Combine(_rootPath, s)));
 
+            expected = expected.Select(x => x.TrimEnd(Path.DirectorySeparatorChar)).ToList();
+
             ClassUnderTest.BuildBy(path, _rootPath, true)
                 .ShouldHaveTheSameElementsAs(expected);
         }
@@ -97,6 +100,8 @@ namespace FubuMVC.Tests.View.Spark.SparkModel
                 _folderNames.Each(s => expected.Add(FileSystem.Combine(p, s)));
             });
 
+            expected = expected.Select(x => x.TrimEnd(Path.DirectorySeparatorChar)).ToList();
+
             ClassUnderTest.BuildBy(p2, _rootPath, true)
                 .ShouldHaveTheSameElementsAs(expected);
         }
@@ -115,7 +120,7 @@ namespace FubuMVC.Tests.View.Spark.SparkModel
 
             var expected = new List<string>();
             paths.Each(p => _folderNames.Each(s => expected.Add(FileSystem.Combine(p, s))));
-
+           
             ClassUnderTest.BuildBy(tree, _rootPath, false)
                 .ShouldHaveTheSameElementsAs(expected);
         }
@@ -138,6 +143,8 @@ namespace FubuMVC.Tests.View.Spark.SparkModel
                 expected.Add(p);
                 _folderNames.Each(s => expected.Add(FileSystem.Combine(p, s)));
             });
+
+            expected = expected.Select(x => x.TrimEnd(Path.DirectorySeparatorChar)).ToList();
 
             ClassUnderTest.BuildBy(tree, _rootPath, true)
                 .ShouldHaveTheSameElementsAs(expected);
