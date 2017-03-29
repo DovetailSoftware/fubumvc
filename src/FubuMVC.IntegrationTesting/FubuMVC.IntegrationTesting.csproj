@@ -73,6 +73,9 @@
     <Reference Include="Rhino.Mocks">
       <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
     </Reference>
+    <Reference Include="Spark, Version=1.7.0.0, Culture=neutral, PublicKeyToken=7f8549eed921a12c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spark.1.7.5.0\lib\NET40\Spark.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -122,6 +125,25 @@
     <Compile Include="UI\FubuPageExtensions_FullStack_Tester.cs" />
     <Compile Include="UI\HtmlDocumentViewEngineIntegrationTester.cs" />
     <Compile Include="UI\ShowEditExpressions_integration_Tester.cs" />
+    <Compile Include="View\ActionlessViews\unattached_views_are_always_actionless_views.cs" />
+    <Compile Include="View\SharedHarness.cs" />
+    <Compile Include="View\SharedHarnessContext.cs" />
+    <Compile Include="View\ViewAttachment\ProfiledAttachmentTester.cs" />
+    <Compile Include="View\ViewEngines\Spark\Activation\ActivationTest.cs" />
+    <Compile Include="View\ViewEngines\Spark\HelloSpark\AirEndpoint.cs" />
+    <Compile Include="View\ViewEngines\Spark\HelloSpark\PartialsWithSparkIntegrationTester.cs" />
+    <Compile Include="View\ViewEngines\Spark\HelloSpark\SparkEngineIntegrationTester.cs" />
+    <Compile Include="View\ViewEngines\Spark\NestedPartials\FamilyEndpoint.cs" />
+    <Compile Include="View\ViewEngines\Spark\NestedPartials\NestedPartialsIntegrationTester.cs" />
+    <Compile Include="View\ViewEngines\Spark\NestedPartials\StringExtensions.cs" />
+    <Compile Include="View\ViewEngines\Spark\PartialNoLayout\Features\HelloPartial\HelloPartialEndpoint.cs" />
+    <Compile Include="View\ViewEngines\Spark\PartialNoLayout\Features\UsesNativePartials\UsesNativeEndpoint.cs" />
+    <Compile Include="View\ViewEngines\Spark\PartialNoLayout\Features\UsesPartial\UsesPartialEndpoint.cs" />
+    <Compile Include="View\ViewEngines\Spark\PartialNoLayout\Features\UsesTransferTo\TransferToEndpoint.cs" />
+    <Compile Include="View\ViewEngines\Spark\PartialNoLayout\PartialNoLayoutIntegrationTester.cs" />
+    <Compile Include="View\ViewEngines\Spark\ThreePassRendering\ThreePassEndpoint.cs" />
+    <Compile Include="View\ViewEngines\Spark\ThreePassRendering\ThreePassRenderingTester.cs" />
+    <Compile Include="View\ViewEngines\Spark\ViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FubuMVC.Core\FubuMVC.Core.csproj">
@@ -159,6 +181,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="View\ViewEngines\Spark\ThreePassRendering\Shared\bindings.xml" />
     <None Include="FubuTestApplication.application.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -249,6 +272,30 @@
     <Content Include="Tests\Packaging\Environment\Environment Runner captures errors from the Environment setup.xml" />
     <Content Include="Tests\Packaging\Environment\Execute Environment Happy Path.xml" />
     <Content Include="Tests\Packaging\Environment\Logging installer failures.xml" />
+    <None Include="View\ActionlessViews\Attached.spark" />
+    <None Include="View\ActionlessViews\Unattached.spark" />
+    <None Include="View\ViewAttachment\m.view.spark" />
+    <None Include="View\ViewAttachment\view.spark" />
+    <None Include="View\ViewEngines\Spark\Activation\Activation.spark" />
+    <None Include="View\ViewEngines\Spark\HelloSpark\Breathe.spark" />
+    <None Include="View\ViewEngines\Spark\HelloSpark\Full.spark" />
+    <None Include="View\ViewEngines\Spark\HelloSpark\Partial1.spark" />
+    <None Include="View\ViewEngines\Spark\HelloSpark\Partial2.spark" />
+    <None Include="View\ViewEngines\Spark\HelloSpark\TakeABreath.spark" />
+    <None Include="View\ViewEngines\Spark\NestedPartials\George.spark" />
+    <None Include="View\ViewEngines\Spark\NestedPartials\Jack.spark" />
+    <None Include="View\ViewEngines\Spark\NestedPartials\Marcus.spark" />
+    <None Include="View\ViewEngines\Spark\NestedPartials\Silvia.spark" />
+    <None Include="View\ViewEngines\Spark\PartialNoLayout\Features\HelloPartial\SayHelloPartial.spark" />
+    <None Include="View\ViewEngines\Spark\PartialNoLayout\Features\UsesNativePartials\UserNative.spark" />
+    <None Include="View\ViewEngines\Spark\PartialNoLayout\Features\UsesNativePartials\_NativePartial.spark" />
+    <None Include="View\ViewEngines\Spark\PartialNoLayout\Features\UsesPartial\UsesPartial.spark" />
+    <None Include="View\ViewEngines\Spark\PartialNoLayout\Shared\Application.spark" />
+    <None Include="View\ViewEngines\Spark\PartialNoLayout\Shared\PartialLayout.spark" />
+    <None Include="View\ViewEngines\Spark\ThreePassRendering\Shared\Application.spark" />
+    <None Include="View\ViewEngines\Spark\ThreePassRendering\Shared\Html.spark" />
+    <None Include="View\ViewEngines\Spark\ThreePassRendering\Shared\_Sidebar.spark" />
+    <None Include="View\ViewEngines\Spark\ThreePassRendering\ThreePassSample.spark" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
