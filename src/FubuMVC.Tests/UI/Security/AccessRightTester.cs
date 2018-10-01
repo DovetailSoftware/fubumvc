@@ -1,8 +1,10 @@
-using System;
-using System.Linq;
 using FubuMVC.Core.UI.Security;
 using FubuTestingSupport;
 using NUnit.Framework;
+using System;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace FubuMVC.Tests.UI.Security
 {
@@ -57,12 +59,22 @@ namespace FubuMVC.Tests.UI.Security
         }
 
         [Test]
-        public void equality_is_always_reference_equality()
+        public void equality_works_when_using_singleton_instances()
         {
             (AccessRight.For("None") == AccessRight.None).ShouldBeTrue();
             (AccessRight.For("All") == AccessRight.For("all")).ShouldBeTrue();
             ReferenceEquals(AccessRight.For("All"), AccessRight.For("all")).ShouldBeTrue();
         }
+
+        [Test]
+        public void equality_works_when_using_deserialized_instances()
+        {
+            var serializedAccessRight = Serializer.SerializeObject(AccessRight.All);
+            var deserializedAccessRight = Serializer.DeserializeObject<AccessRight>(serializedAccessRight);
+            ReferenceEquals(AccessRight.All, deserializedAccessRight).ShouldBeFalse();
+            (AccessRight.All == deserializedAccessRight).ShouldBeTrue();
+        }
+        
 
         [Test]
         public void inequality()
@@ -120,7 +132,24 @@ namespace FubuMVC.Tests.UI.Security
             AccessRight.Least().ShouldEqual(AccessRight.None);
         }
 
+        static class Serializer
+        {
+            public static ArraySegment<byte> SerializeObject(object value)
+            {
+                using(var ms = new MemoryStream())
+                {
+                    new BinaryFormatter().Serialize(ms, value);
+                    return new ArraySegment<byte>(ms.GetBuffer(), 0, (int)ms.Length);
+                }
+            }
+	
+            public static T DeserializeObject<T>(ArraySegment<byte> value)
+            {
+                using(var ms = new MemoryStream(value.Array, value.Offset, value.Count))
+                {
+                    return (T)new BinaryFormatter().Deserialize(ms);
+                }
+            }
+        }
     }
-
-
 }

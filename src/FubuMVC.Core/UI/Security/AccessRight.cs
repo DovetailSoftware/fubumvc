@@ -68,17 +68,30 @@ namespace FubuMVC.Core.UI.Security
         {
             return first.Permissiveness >= second.Permissiveness;
         }
+        
+        public static bool operator ==(AccessRight left, AccessRight right)
+        {
+            return Equals(left, right);
+        }
+
+        public static bool operator !=(AccessRight left, AccessRight right)
+        {
+            return !Equals(left, right);
+        }
 
         public bool Equals(AccessRight other)
         {
             if (ReferenceEquals(null, other)) return false;
-            return ReferenceEquals(this, other);
+            if (ReferenceEquals(this, other)) return true;
+            return _read == other._read && _write == other._write && _permissiveness == other._permissiveness && string.Equals(_name, other._name, StringComparison.OrdinalIgnoreCase);
         }
 
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
-            return ReferenceEquals(this, obj);
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((AccessRight) obj);
         }
 
         public override int GetHashCode()
